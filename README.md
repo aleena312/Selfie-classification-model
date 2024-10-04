@@ -1,1 +1,3 @@
 # Selfie-classification-model
+
+The proposed model for selfie classification utilizes a fine-tuned ResNet-50 architecture via transfer learning. The top layers of ResNet-50 are replaced by three fully connected layers (512, 256, 128 neurons), each followed by ReLU activation, dropout (0.3, 0.2, 0.2 rates), and batch normalization to improve generalization and stability. A custom attention layer is added to emphasize important features dynamically. The output layer is a single neuron with sigmoid activation for binary classification. The model is optimized using Adam with a learning rate of 0.01 and trained for 15 epochs on a V100 GPU, with EarlyStopping to prevent overfitting.
